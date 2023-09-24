@@ -1,0 +1,6 @@
+.menu li a.active{
+    color: red!important;
+    background-color: transparent!important;
+    font-weight: 600!important;
+    text-decoration: underline!important;
+}
