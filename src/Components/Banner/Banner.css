@@ -1,0 +1,10 @@
+.banner {
+    width: 100%;
+    background-image: url('https://i.ibb.co/YQQ4XW9/aa.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat!important;
+}
+
+
+/* style={{ backgroundImage: 'url("https://i.ibb.co/YQQ4XW9/aa.jpg")', backgroundRepeat: 'no-repeat' }} */

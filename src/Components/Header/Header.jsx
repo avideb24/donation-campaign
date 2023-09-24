@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto py-4">
             <div className="navbar bg-base-100">
                 <div className="flex-1">
                     <Link to='/'>
