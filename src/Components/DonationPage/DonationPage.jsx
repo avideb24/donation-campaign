@@ -46,7 +46,7 @@ const DonationPage = () => {
                                     </div> :
                                     <div className="flex flex-wrap justify-center gap-4">
                                         {
-                                            donations.slice(0, 2).map(donation =>
+                                            donations.slice(0, 4).map(donation =>
                                                 <div key={donation.id} className="flex w-[350px] md:w-[600px]">
                                                     <img className="rounded-bl-lg w-1/2 object-cover rounded-tl-lg rounded-tr-none" src={donation.img} alt="" />
                                                     <div className='p-5 rounded-tr-lg rounded-br-lg flex-grow' style={{ backgroundColor: `${donation.card_bg}`, color: `${donation.text_color}` }}>
@@ -66,7 +66,7 @@ const DonationPage = () => {
             </div>
             <div className="text-center">
                 {
-                    donations.length > 2 &&
+                    donations.length > 4 &&
                     <div>
                         {
                             isShow === false ?
