@@ -8,7 +8,7 @@ const Donation = ({ donation }) => {
     return (
         <div>
             <Link to={`/donation/${id}`}>
-                <img src={img} alt="" />
+                <img className='w-full' src={img} alt="" />
                 <div className='p-5 rounded-b-lg' style={{ backgroundColor: `${card_bg}`, color: `${text_color}` }}>
                     <p className='inline-block p-1 rounded px-2 text-sm' style={{ backgroundColor: `${category_bg}` }}>{category}</p>
                     <h2 className='text-xl font-semibold mt-2'>{title}</h2>

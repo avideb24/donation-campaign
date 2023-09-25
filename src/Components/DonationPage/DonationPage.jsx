@@ -27,12 +27,12 @@ const DonationPage = () => {
                         <div>
                             {
                                 isShow ?
-                                    <div className="grid grid-cols-2 gap-4">
+                                <div className="flex flex-wrap justify-center gap-4">
                                         {
                                             donations.map(donation =>
-                                                <div key={donation.id} className="flex">
-                                                    <img className="rounded-bl-lg rounded-tl-lg rounded-tr-none" src={donation.img} alt="" />
-                                                    <div className='p-5 rounded-tr-lg rounded-br-lg' style={{ backgroundColor: `${donation.card_bg}`, color: `${donation.text_color}` }}>
+                                                <div key={donation.id} className="flex w-[350px] md:w-[600px]">
+                                                    <img className="rounded-bl-lg w-1/2 object-cover rounded-tl-lg rounded-tr-none" src={donation.img} alt="" />
+                                                    <div className='p-5 rounded-tr-lg rounded-br-lg flex-grow' style={{ backgroundColor: `${donation.card_bg}`, color: `${donation.text_color}` }}>
                                                         <p className='inline-block p-1 rounded px-2 text-sm' style={{ backgroundColor: `${donation.category_bg}` }}>{donation.category}</p>
                                                         <h2 className='text-xl font-semibold mt-2'>{donation.title}</h2>
                                                         <p>${donation.price}</p>
@@ -41,12 +41,12 @@ const DonationPage = () => {
                                                 </div>)
                                         }
                                     </div> :
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="flex flex-wrap justify-center gap-4">
                                         {
                                             donations.slice(0, 2).map(donation =>
-                                                <div key={donation.id} className="flex">
-                                                    <img className="rounded-bl-lg rounded-tl-lg rounded-tr-none" src={donation.img} alt="" />
-                                                    <div className='p-5 rounded-tr-lg rounded-br-lg' style={{ backgroundColor: `${donation.card_bg}`, color: `${donation.text_color}` }}>
+                                                <div key={donation.id} className="flex w-[350px] md:w-[600px]">
+                                                    <img className="rounded-bl-lg w-1/2 object-cover rounded-tl-lg rounded-tr-none" src={donation.img} alt="" />
+                                                    <div className='p-5 rounded-tr-lg rounded-br-lg flex-grow' style={{ backgroundColor: `${donation.card_bg}`, color: `${donation.text_color}` }}>
                                                         <p className='inline-block p-1 rounded px-2 text-sm' style={{ backgroundColor: `${donation.category_bg}` }}>{donation.category}</p>
                                                         <h2 className='text-xl font-semibold mt-2'>{donation.title}</h2>
                                                         <p>${donation.price}</p>
