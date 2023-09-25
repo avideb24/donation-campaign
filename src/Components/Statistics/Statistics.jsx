@@ -20,9 +20,15 @@ const Statistics = () => {
 
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('donations'));
-        const storedDataLength = storedData.length;
 
-        setDonatedBoxes(storedDataLength);
+        if (storedData) {
+            const storedDataLength = storedData.length;
+            setDonatedBoxes(storedDataLength);
+        }
+        else{
+            setDonatedBoxes(0)
+        }
+
     }, [])
 
     const percentageDonated = ((donatedBoxes / totalBoxes) * 100).toFixed(2);
