@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className="max-w-7xl mx-auto py-4 bg-white">
+        <div className="max-w-7xl mx-auto py-4 bg-transparent relative z-30">
             <div className=" flex sm:justify-between sm:flex-row flex-col items-center">
                 <div>
                     <Link to='/'>

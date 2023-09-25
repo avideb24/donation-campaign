@@ -40,7 +40,7 @@ const Home = () => {
     return (
         <div>
             <Banner textData={textData}></Banner>
-            <div className="max-w-7xl py-10 sm:py-20 lg:mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 px-4">
+            <div className="max-w-7xl py-10 sm:py-20 lg:mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 px-4 xl:mt-96 md:mt-96 sm:mt-80 mt-60 xl:pt-28">
                 {
                     displayData.map(donation => <Donation key={donation.id} donation={donation}></Donation>)
                 }

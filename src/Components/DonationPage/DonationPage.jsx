@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const DonationPage = () => {
 
@@ -27,7 +28,7 @@ const DonationPage = () => {
                         <div>
                             {
                                 isShow ?
-                                <div className="flex flex-wrap justify-center gap-4">
+                                    <div className="flex flex-wrap justify-center gap-4">
                                         {
                                             donations.map(donation =>
                                                 <div key={donation.id} className="flex w-[350px] md:w-[600px]">
@@ -36,7 +37,9 @@ const DonationPage = () => {
                                                         <p className='inline-block p-1 rounded px-2 text-sm' style={{ backgroundColor: `${donation.category_bg}` }}>{donation.category}</p>
                                                         <h2 className='text-xl font-semibold mt-2'>{donation.title}</h2>
                                                         <p>${donation.price}</p>
-                                                        <button className="text-white px-4 py-3 rounded-lg mt-4" style={{ backgroundColor: `${donation.text_color}` }}>View Details</button>
+                                                        <Link to={`/donation/${donation.id}`}>
+                                                            <button className="text-white px-4 py-3 rounded-lg mt-4" style={{ backgroundColor: `${donation.text_color}` }}>View Details</button>
+                                                        </Link>
                                                     </div>
                                                 </div>)
                                         }
@@ -50,7 +53,9 @@ const DonationPage = () => {
                                                         <p className='inline-block p-1 rounded px-2 text-sm' style={{ backgroundColor: `${donation.category_bg}` }}>{donation.category}</p>
                                                         <h2 className='text-xl font-semibold mt-2'>{donation.title}</h2>
                                                         <p>${donation.price}</p>
-                                                        <button className="text-white px-4 py-3 rounded-lg mt-4" style={{ backgroundColor: `${donation.text_color}` }}>View Details</button>
+                                                        <Link to={`/donation/${donation.id}`}>
+                                                            <button className="text-white px-4 py-3 rounded-lg mt-4" style={{ backgroundColor: `${donation.text_color}` }}>View Details</button>
+                                                        </Link>
                                                     </div>
                                                 </div>)
                                         }
@@ -67,7 +72,7 @@ const DonationPage = () => {
                             isShow === false ?
                                 <div className="text-center my-4 ">
                                     <button onClick={() => setIsShow(!isShow)} className="btn btn-success text-white">See More</button>
-                                </div> : 
+                                </div> :
                                 ''
                         }
                     </div>
