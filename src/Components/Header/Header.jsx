@@ -3,8 +3,8 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className="max-w-7xl mx-auto py-4">
-            <div className=" bg-base-100 flex sm:justify-between sm:flex-row flex-col items-center">
+        <div className="max-w-7xl mx-auto py-4 bg-white">
+            <div className=" flex sm:justify-between sm:flex-row flex-col items-center">
                 <div>
                     <Link to='/'>
                         <img className="w-40" src="https://i.ibb.co/3RFDDW1/Logo.png" alt="logo" />
