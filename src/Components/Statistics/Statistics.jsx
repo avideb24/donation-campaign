@@ -49,7 +49,7 @@ const Statistics = () => {
     return (
         <div className='mt-4'>
 
-            <div style={{ padding: '20px', width: '50%' }} className='mx-auto'>
+            <div className='mx-auto w-[300px] sm:w-1/2 p-10'>
                 <Pie data={data} options={options}>
 
                 </Pie>
