@@ -35,8 +35,6 @@ const Home = () => {
         }
     }
 
-    console.log(displayData);
-
     return (
         <div>
             <Banner textData={textData}></Banner>
